@@ -23,7 +23,7 @@ def add_block():
         page = client.get_block(notebook_link)
 
         today = date.today()
-        new_block = page.children.add_new(TextBlock, title=today.strftime("%d/%m/%y") + ": " + note_title)
+        new_block = page.children.add_new(TextBlock, title=today.strftime("%m/%d") + ": " + note_title)
         new_block.set('format.block_color', 'red')        
         page.children.add_new(TextBlock, title=note_text)
 
